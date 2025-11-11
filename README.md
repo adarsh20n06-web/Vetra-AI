@@ -1,2 +1,3 @@
-# VetraAI-
-"That AI is made by ventra group which is access to any devloper who provide API from us for to their project work it is made on Next-gen System"
+## 🔒 License
+All Rights Reserved © 2025 [Adarsh VetraAI]  
+Unauthorized copying or reuse of this code is strictly prohibited.
