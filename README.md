@@ -1,4 +1,4 @@
-# [VetraAI]
+# [Vetra-AI]
 
 That is based on AI based Project  ["That AI is based on Next-gen level in that Ai we provide to devloper to access API and provide different types of access in this ,give mind system like another and develop many types of facilities].
 
@@ -13,5 +13,5 @@ That is based on AI based Project  ["That AI is based on Next-gen level in that 
 - HTML / CSS / JS 
 
 ## 🔒 License
-All Rights Reserved © 2025 [Adarsh VetraAI]  
+All Rights Reserved © 2025 [Adarsh Vetra-AI]  
 Unauthorized copying or reuse of this code is strictly prohibited.
