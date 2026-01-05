@@ -1,6 +1,10 @@
 fastapi
 uvicorn
-transformers
-torch
-python-multipart
+asyncpg
+aioredis
+bcrypt
+python-jose
+cryptography
+slowapi
+prometheus-client
 pydantic
