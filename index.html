@@ -1,66 +1,53 @@
-
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Vetra AI</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
+        /* ===== Reset & Base ===== */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            margin: 0;
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #2b5876, #4e4376);
             color: white;
-            text-align: center;
-            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
             min-height: 100vh;
+            padding: 20px;
         }
 
-        .logo-img {
-            width: 90px;
-            margin: 10px auto;
-            display: block;
-        }
-
-        .logo-text {
-            font-size: 34px;
+        /* ===== Logo ===== */
+        .logo {
+            font-size: 36px;
             font-weight: 700;
+            margin-bottom: 15px;
             background: linear-gradient(45deg, #ffce00, #ff4f4f);
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 5px;
+            color: transparent;
+            text-align: center;
         }
 
-        .subtitle {
-            opacity: 0.8;
-            margin-bottom: 15px;
+        .tagline {
+            text-align: center;
+            opacity: 0.85;
+            margin-bottom: 25px;
         }
 
-        .hero {
-            width: 100%;
-            max-width: 320px;
-            margin: 15px auto 25px;
-            border-radius: 20px;
-            box-shadow: 0 0 25px rgba(0,0,0,0.4);
-            display: block;
-        }
-
+        /* ===== Card ===== */
         .card {
-            background: rgba(255,255,255,0.12);
-            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
             border-radius: 15px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
             max-width: 600px;
-            margin: auto;
-            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            width: 100%;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
         }
 
         input, textarea {
@@ -70,22 +57,19 @@
             border-radius: 10px;
             border: none;
             outline: none;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        textarea {
-            resize: none;
+            font-size: 16px;
         }
 
         button {
             width: 100%;
             background: #ffce00;
-            padding: 12px;
+            padding: 14px;
             border: none;
             border-radius: 10px;
             font-weight: 600;
             cursor: pointer;
             font-size: 16px;
+            transition: 0.3s;
         }
 
         button:hover {
@@ -97,62 +81,63 @@
             background: rgba(255,255,255,0.15);
             padding: 15px;
             border-radius: 10px;
-            min-height: 80px;
-            text-align: left;
+            min-height: 100px;
+            max-height: 300px;
+            overflow-y: auto;
             white-space: pre-wrap;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 480px) {
+            .logo { font-size: 28px; }
+            .card { padding: 20px; }
+            input, textarea, button { font-size: 14px; }
         }
     </style>
 </head>
-
 <body>
+    <div class="container">
+        <div class="logo">⚡ Vetra AI</div>
+        <div class="tagline">Your personal AI assistant powered by FastAPI</div>
 
-    <!-- LOGO -->
-    <img src="assets/logo.png" alt="Vetra AI Logo" class="logo-img">
-    <div class="logo-text">Vetra AI</div>
-    <div class="subtitle">Your personal AI assistant</div>
-
-    <!-- HERO IMAGE -->
-    <img src="assets/hero.png" alt="Vetra AI Hero" class="hero">
-
-    <!-- MAIN CARD -->
-    <div class="card">
-        <input id="apiKey" type="text" placeholder="Enter your API Key (vetra_xxx)">
-        <textarea id="prompt" rows="4" placeholder="Type your question..."></textarea>
-        <button onclick="askVetra()">Ask Vetra</button>
-        <div id="responseBox">Response will appear here...</div>
+        <div class="card">
+            <input id="apiKey" type="text" placeholder="Enter your API Key (vetra_xxx)" />
+            <textarea id="prompt" rows="4" placeholder="Type your question..."></textarea>
+            <button onclick="askVetra()">Ask Vetra</button>
+            <div id="responseBox">Response will appear here...</div>
+        </div>
     </div>
 
     <script>
         async function askVetra() {
-            const apiKey = document.getElementById("apiKey").value.trim();
+            const key = document.getElementById("apiKey").value.trim();
             const prompt = document.getElementById("prompt").value.trim();
-            const responseBox = document.getElementById("responseBox");
 
-            if (!apiKey || !prompt) {
-                alert("API key and prompt are required");
+            if (!key || !prompt) {
+                alert("API key & prompt required!");
                 return;
             }
 
+            const responseBox = document.getElementById("responseBox");
             responseBox.innerText = "Thinking...";
 
             try {
-                const response = await fetch("https://YOUR-API-URL/ask", {
+                const res = await fetch("https://YOUR-API-URL/ask", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
-                        "Authorization": apiKey
+                        "Authorization": key
                     },
                     body: JSON.stringify({ prompt: prompt })
                 });
 
-                const data = await response.json();
+                const data = await res.json();
                 responseBox.innerText = data.answer || JSON.stringify(data, null, 2);
 
-            } catch (error) {
-                responseBox.innerText = "Server error. Please try again.";
+            } catch (err) {
+                responseBox.innerText = "Error: " + err;
             }
         }
     </script>
-
 </body>
 </html>
