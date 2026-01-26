@@ -1,30 +1,70 @@
-Copyright © 2025 VetraAI. All rights reserved.
+PROPRIETARY SOFTWARE LICENSE
+ALL RIGHTS RESERVED
 
-VetraAI, the VetraAI name, brand, logo, AI systems, model architecture, datasets,
-and all related assets are the exclusive intellectual property of VetraAI.
+Copyright © 2026 NOBLTY AI × aastrax
+All rights reserved.
 
-Unauthorized actions are strictly prohibited, including but not limited to:
-- Copying, duplicating, or downloading any part of the source code, AI model,
-  design, UI, backend logic, or training structure.
-- Creating modified versions, derivative works, clones, or replicas of VetraAI.
-- Redistributing, uploading, publishing, or sharing this software or its models.
-- Using any VetraAI code, backend, datasets, or models for commercial,
-  non-commercial, educational, or research purposes without written permission.
-- Attempting to reverse-engineer, extract, decompile, or decode any part of the
-  AI logic, model weights, API system, or security layers.
-- Using the VetraAI name, trademark, branding, or logo for any product, service,
-  application, or promotional activity.
+This software, including but not limited to its source code, architecture,
+algorithms, logic, documentation, design, user interface, training mechanisms,
+and all associated intellectual property (collectively, the “Software”),
+is the exclusive and proprietary property of NOBLTY AI × aastrax.
 
-This license grants **zero rights** to users.  
-No part of this software, including the AI logic, model weights, or UI elements,
-may be used, modified, or distributed without an officially signed agreement
-from VetraAI.
 
-Violations may result in legal action under:
-- International Copyright Laws  
-- Digital Millennium Copyright Act (DMCA)  
-- Trademark Protection Laws  
-- Intellectual Property Laws  
+PERMITTED USE
+-------------
+The Software may be used only for:
+• Personal viewing or evaluation through officially hosted instances
+• Authorized deployment explicitly approved by the owner in writing
 
-For permissions or commercial licensing, contact:  
-vetraai-official@support.com
+No ownership rights are transferred under this license.
+
+
+STRICTLY PROHIBITED
+------------------
+Without prior written permission from the owner, you may NOT:
+• Copy, clone, fork, or mirror this repository
+• Modify, adapt, translate, or create derivative works
+• Redistribute, publish, sublicense, or sell any part of the Software
+• Reverse engineer, decompile, or disassemble any component
+• Use the Software to train, enhance, or power another AI system
+• Claim the Software or its outputs as your own intellectual property
+• Remove or alter copyright, trademark, or attribution notices
+• Use the Software for commercial purposes of any kind
+
+
+INTELLECTUAL PROPERTY
+--------------------
+All rights, title, and interest in and to the Software remain exclusively
+with NOBLTY AI × aastrax.
+
+The names “NOBLTY”, “aastrax”, “NOBLTY AI”, and all related identifiers
+are protected names and may not be used without explicit permission.
+
+
+NO WARRANTY
+-----------
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+
+LIMITATION OF LIABILITY
+----------------------
+IN NO EVENT SHALL THE OWNER BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES ARISING
+OUT OF OR IN CONNECTION WITH THE USE OR INABILITY TO USE THE SOFTWARE.
+
+
+ENFORCEMENT
+-----------
+Any violation of this license may result in immediate termination of access
+and may lead to civil or criminal legal action under applicable laws.
+
+
+CONTACT
+-------
+For permissions, licensing inquiries, or authorized use, contact the owner
+through official channels only.
+
+
+END OF LICENSE
