@@ -10,7 +10,7 @@ REPORTING A VULNERABILITY
 -------------------------
 If you discover a security vulnerability, please report it PRIVATELY to the owner:
 
-- Email: security@nobltyaaastrax.com  (replace with official contact)
+- Email: security nobltyaastrax@gmail.com
 - Subject: "[Security] Vulnerability Report"
 
 Do NOT publicly disclose security issues.
